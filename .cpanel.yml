@@ -2,5 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/merli834/public_html/
-    - index.js $DEPLOYPATH
-    - index.html $DEPLOYPATH
+    - /bin/cp index.js $DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH
