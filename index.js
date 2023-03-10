@@ -1,9 +1,20 @@
 const TelegramBot = require('node-telegram-bot-api');
+const http = require('http');
 require('dotenv').config();
 
 // Создание экземпляра бота
 const bot = new TelegramBot(process.env.TOKEN, {
     polling: true,
+});
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Hello World\n');
+});
+
+server.listen(process.env.PORT || 5000, () => {
+    console.log(`Listening on port ${process.env.PORT || 5000}`);
 });
 
 const getCurrentWeek = () => {
