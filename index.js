@@ -3,7 +3,7 @@ require('dotenv').config();
 
 // Создание экземпляра бота
 const bot = new TelegramBot(process.env.TOKEN, {
-    polling: false,
+    polling: true,
 });
 
 const getCurrentWeek = () => {
