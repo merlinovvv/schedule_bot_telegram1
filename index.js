@@ -2,14 +2,9 @@ const TelegramBot = require('node-telegram-bot-api');
 require('dotenv').config();
 const token = process.env.TOKEN;
 
-const port = process.env.PORT || 3000;
-
 // Создание экземпляра бота
 const bot = new TelegramBot(token, {
     polling: true,
-    webHook: {
-        port: port
-    }
 });
 
 
