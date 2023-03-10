@@ -1,6 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/merli834/public_html/
-    - /bin/cp index.js $DEPLOYPATH
-    - /bin/cp index.html $DEPLOYPATH
