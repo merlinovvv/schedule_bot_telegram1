@@ -12,7 +12,6 @@ const bot = new TelegramBot(token, {
     }
 });
 
-bot.setWebHook(`https://telegram-bot-schedule.herokuapp.com:${port}/${token}`);
 
 const getCurrentWeek = () => {
     const today = new Date();
