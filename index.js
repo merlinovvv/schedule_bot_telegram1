@@ -1,18 +1,10 @@
 const TelegramBot = require('node-telegram-bot-api');
 require('dotenv').config();
-const token = process.env.TOKEN;
 
 // Создание экземпляра бота
-const bot = new TelegramBot(token, {
+const bot = new TelegramBot(process.env.TOKEN, {
     polling: false,
 });
-
-const port = process.env.PORT || 3000;
-const url = process.env.APP_URL;
-bot
-    .setWebHook(`${url}/bot${token}`)
-    .then(() => console.log(`Listening on port ${port}`))
-    .catch((error) => console.log(error));
 
 const getCurrentWeek = () => {
     const today = new Date();
